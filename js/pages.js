@@ -12,6 +12,7 @@ const pages = [
 // pick the relevant tags
 const nextTag = document.querySelector("footer img.next")
 const previousTag = document.querySelector("footer img.prev")
+const randomTag = document.querySelector("footer img.random")
 const outputTag = document.querySelector("h2")
 const circleTag = document.querySelector("section div.circle")
 const bodyTag = document.querySelector("body")
@@ -38,6 +39,13 @@ const previous = function () {
   updateSection()
 }
 
+// make a function to randomise pageNumber
+const random = function () {
+  pageNumber = Math.floor( Math.random() * pages.length )
+
+  updateSection()
+}
+
 // update the section's content and style
 const updateSection = function () {
   outputTag.innerHTML = pages[pageNumber].copy
@@ -55,3 +63,7 @@ previousTag.addEventListener("click", function () {
   previous()
 })
 
+// on click of randomTag, run this
+randomTag.addEventListener("click", function () {
+  random()
+})
