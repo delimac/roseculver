@@ -3,10 +3,22 @@ let pageNumber = 0
 
 // content for the pages
 const pages = [
-  { copy: "a Brooklyn-based graphic designer", background: "#edc7a9", circle: "#3e78ed" },
-  { copy: "Kanye West's biggest fan", background: "#a1fffe", circle: "#e34a47" },
-  { copy: "looking for a job at the start of October", background: "#d3c7f3", circle: "#f7fe00" },
-  { copy: `letting you <a href="pdf.pdf">download her PDF</a>.`, background: "#faffb8", circle: "#b472e6" }
+  { copy: "a Brooklyn-based graphic designer", 
+    background: "#edc7a9",
+    circle: "#3e78ed" 
+  },
+  { copy: "Kanye West's biggest fan", 
+    background: "#a1fffe", 
+    circle: "#e34a47" 
+  },
+  { copy: "looking for a job at the start of October",
+    background: "#d3c7f3", 
+    circle: "#f7fe00" 
+  },
+  { copy: `letting you <a href="pdf.pdf">download her PDF</a>.`, 
+    background: "#faffb8", 
+    circle: "#b472e6" 
+  }
 ]
 
 // pick the relevant tags
@@ -67,3 +79,23 @@ previousTag.addEventListener("click", function () {
 randomTag.addEventListener("click", function () {
   random()
 })
+
+// when user presses a key, check for arrow left or right
+// and do next or previous
+document.addEventListener("keyup", function (event) {
+  console.log(event)
+  // if the key being pressed is ArrowRight
+  if (event.key == "ArrowRight") {
+    next()
+  }
+
+  // if the key being pressed is ArrowLeft
+  if (event.key == "ArrowLeft") {
+    previous()
+  }
+
+  if (event.key == " ") {
+    random()
+  }
+})
+
