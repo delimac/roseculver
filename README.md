@@ -1,4 +1,4 @@
-[link](https://delimac.github.io/roseculver)
+[View](https://delimac.github.io/roseculver)
 
 # Rose Culver
 ## SuperHi - JS for Designers - Project 01
