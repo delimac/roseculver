@@ -1,9 +1,12 @@
+// This is the data for holding current page
 let pageNumber = 0
 
+// pick the relevant tags
 const nextTag = document.querySelector("footer img.next")
-const prevTag = document.querySelector("footer img.prev")
+const previousTag = document.querySelector("footer img.prev")
 const outputTag = document.querySelector("h2")
 
+// make a function to increase pageNumber
 const next = function () {
   pageNumber = pageNumber + 1
 
@@ -14,6 +17,7 @@ const next = function () {
   updateSection()
 }
 
+// make a function to decrease pageNumber
 const previous = function () {
   pageNumber = pageNumber - 1
 
@@ -24,14 +28,17 @@ const previous = function () {
   updateSection()
 }
 
+// update the section's content and style
 const updateSection = function () {
   outputTag.innerHTML = pageNumber
 }
 
+// on click of nextTag, run this
 nextTag.addEventListener("click", function () {
   next()
 })
 
-prevTag.addEventListener("click", function () {
+// on click of previousTag, run this
+previousTag.addEventListener("click", function () {
   previous()
 })
