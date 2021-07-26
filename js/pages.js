@@ -98,4 +98,3 @@ document.addEventListener("keyup", function (event) {
     random()
   }
 })
-
